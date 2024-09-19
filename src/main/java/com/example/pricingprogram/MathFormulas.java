@@ -18,16 +18,30 @@ public class MathFormulas {
         }
     }
 
-    public double glassSquareFootage(double x, double y) {
-        return Math.ceil((((x - 3) / 12) * ((y - 3) / 12)) * 10);
+    public double glassSquareFootage(double width, double height, double price) {
+        return Math.ceil((((width - 3) / 12) * ((height - 3) / 12)) * price);
     }
 
-    public double metalLinearFoot(double x, double y) {
-        return Math.ceil(((x * 2) + (y * 2)) / 0.50);
+    public double metalLinearFoot(double width, double height, double price, int panels, int midRails) {
+        if(panels == 1) {
+            height = height * 2;
+        }
+        if (panels > 1) {
+            int verticals = panels + 1;
+            height = height * verticals;
+        }
+        if(midRails == 0) {
+            width = width * 2;
+        }
+        if (midRails > 0) {
+            int horizontals = midRails + 2;
+            width = width * horizontals;
+        }
+        return (width + height) * price;
     }
 
     public double metalLinearFootUnited(double x, double y) {
-        return (x + y) / 0.50;
+        return (x + y) * 1.75;
     }
 
 }

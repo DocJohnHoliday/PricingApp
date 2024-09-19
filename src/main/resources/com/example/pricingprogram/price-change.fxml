@@ -6,41 +6,371 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="764.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pricingprogram.PriceChangeController">
    <children>
-      <HBox prefHeight="100.0" prefWidth="200.0">
-         <children>
-            <Label text="Metal Price">
-               <HBox.margin>
-                  <Insets left="50.0" top="30.0" />
-               </HBox.margin>
-            </Label>
-            <TextField>
-               <HBox.margin>
-                  <Insets left="20.0" top="30.0" />
-               </HBox.margin>
-            </TextField>
-         </children>
-      </HBox>
-      <HBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0">
-         <children>
-            <Label text="Glass Price">
-               <HBox.margin>
-                  <Insets left="50.0" />
-               </HBox.margin>
-            </Label>
-            <TextField>
-               <HBox.margin>
-                  <Insets left="20.0" />
-               </HBox.margin>
-            </TextField>
-         </children>
-      </HBox>
-      <Button mnemonicParsing="false" text="Change">
+      <Label prefHeight="45.0" prefWidth="177.0" text="Price Change" textAlignment="CENTER" underline="true">
+         <font>
+            <Font size="30.0" />
+         </font>
          <VBox.margin>
-            <Insets left="250.0" />
+            <Insets left="220.0" top="20.0" />
+         </VBox.margin>
+      </Label>
+      <Label text="Metal">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <VBox.margin>
+            <Insets left="15.0" />
+         </VBox.margin>
+      </Label>
+      <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: black;">
+         <children>
+            <Label prefHeight="27.0" prefWidth="105.0" text="New Price:">
+               <HBox.margin>
+                  <Insets left="30.0" top="30.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="newMetalPrice">
+               <HBox.margin>
+                  <Insets top="30.0" />
+               </HBox.margin>
+            </TextField>
+            <Label prefHeight="27.0" prefWidth="118.0" text="Current Price:">
+               <HBox.margin>
+                  <Insets left="30.0" top="30.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="currentMetalPrice" editable="false" layoutX="140.0" layoutY="40.0">
+               <HBox.margin>
+                  <Insets top="30.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <Label layoutX="25.0" layoutY="75.0" text="Glass">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <VBox.margin>
+            <Insets left="15.0" />
+         </VBox.margin>
+      </Label>
+      <HBox layoutX="10.0" layoutY="110.0" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: black;">
+         <children>
+            <Label prefHeight="20.0" prefWidth="86.0" text="3/16&quot; Clear">
+               <HBox.margin>
+                  <Insets left="5.0" top="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="27.0" prefWidth="84.0" text="New Price:">
+               <HBox.margin>
+                  <Insets top="30.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="new316GlassPrice">
+               <HBox.margin>
+                  <Insets top="30.0" />
+               </HBox.margin>
+            </TextField>
+            <Label prefHeight="27.0" prefWidth="108.0" text="Current Price:">
+               <HBox.margin>
+                  <Insets left="15.0" top="30.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="current316GlassPrice" editable="false" layoutX="140.0" layoutY="40.0">
+               <HBox.margin>
+                  <Insets top="30.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox layoutX="10.0" layoutY="245.0" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: black;">
+         <children>
+            <Label prefHeight="20.0" prefWidth="86.0" text="3/16&quot; Tint">
+               <HBox.margin>
+                  <Insets left="5.0" top="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="27.0" prefWidth="84.0" text="New Price:">
+               <HBox.margin>
+                  <Insets top="30.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="new316TintGlassPrice">
+               <HBox.margin>
+                  <Insets top="30.0" />
+               </HBox.margin>
+            </TextField>
+            <Label prefHeight="27.0" prefWidth="108.0" text="Current Price:">
+               <HBox.margin>
+                  <Insets left="15.0" top="30.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="current316TintGlassPrice" editable="false" layoutX="140.0" layoutY="40.0">
+               <HBox.margin>
+                  <Insets top="30.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox layoutX="10.0" layoutY="345.0" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: black;">
+         <children>
+            <Label prefHeight="20.0" prefWidth="86.0" text="3/16&quot; Low E">
+               <HBox.margin>
+                  <Insets left="5.0" top="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="27.0" prefWidth="84.0" text="New Price:">
+               <HBox.margin>
+                  <Insets top="30.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="new316LEGlassPrice">
+               <HBox.margin>
+                  <Insets top="30.0" />
+               </HBox.margin>
+            </TextField>
+            <Label prefHeight="27.0" prefWidth="108.0" text="Current Price:">
+               <HBox.margin>
+                  <Insets left="15.0" top="30.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="current316LEGlassPrice" editable="false" layoutX="140.0" layoutY="40.0">
+               <HBox.margin>
+                  <Insets top="30.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox layoutX="10.0" layoutY="445.0" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: black;">
+         <children>
+            <Label prefHeight="20.0" prefWidth="86.0" text="1/4&quot; Clear">
+               <HBox.margin>
+                  <Insets left="5.0" top="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="27.0" prefWidth="84.0" text="New Price:">
+               <HBox.margin>
+                  <Insets top="30.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="new14ClearGlassPrice">
+               <HBox.margin>
+                  <Insets top="30.0" />
+               </HBox.margin>
+            </TextField>
+            <Label prefHeight="27.0" prefWidth="108.0" text="Current Price:">
+               <HBox.margin>
+                  <Insets left="15.0" top="30.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="current14ClearGlassPrice" editable="false" layoutX="140.0" layoutY="40.0">
+               <HBox.margin>
+                  <Insets top="30.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox layoutX="10.0" layoutY="545.0" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: black;">
+         <children>
+            <Label prefHeight="20.0" prefWidth="86.0" text="1/4&quot; Tint">
+               <HBox.margin>
+                  <Insets left="5.0" top="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="27.0" prefWidth="84.0" text="New Price:">
+               <HBox.margin>
+                  <Insets top="30.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="new14TintGlassPrice">
+               <HBox.margin>
+                  <Insets top="30.0" />
+               </HBox.margin>
+            </TextField>
+            <Label prefHeight="27.0" prefWidth="108.0" text="Current Price:">
+               <HBox.margin>
+                  <Insets left="15.0" top="30.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="current14TintGlassPrice" editable="false" layoutX="140.0" layoutY="40.0">
+               <HBox.margin>
+                  <Insets top="30.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox layoutX="10.0" layoutY="609.0" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: black;">
+         <children>
+            <Label prefHeight="20.0" prefWidth="86.0" text="IG 1&quot; Clear">
+               <HBox.margin>
+                  <Insets left="5.0" top="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="27.0" prefWidth="84.0" text="New Price:">
+               <HBox.margin>
+                  <Insets top="30.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="newIGClearGlassPrice">
+               <HBox.margin>
+                  <Insets top="30.0" />
+               </HBox.margin>
+            </TextField>
+            <Label prefHeight="27.0" prefWidth="108.0" text="Current Price:">
+               <HBox.margin>
+                  <Insets left="15.0" top="30.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="currentIGClearGlassPrice" editable="false" layoutX="140.0" layoutY="40.0">
+               <HBox.margin>
+                  <Insets top="30.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox layoutX="10.0" layoutY="630.0" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: black;">
+         <children>
+            <Label prefHeight="20.0" prefWidth="86.0" text="IG 1&quot; Tint">
+               <HBox.margin>
+                  <Insets left="5.0" top="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="27.0" prefWidth="84.0" text="New Price:">
+               <HBox.margin>
+                  <Insets top="30.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="newIGTintedGlassPrice">
+               <HBox.margin>
+                  <Insets top="30.0" />
+               </HBox.margin>
+            </TextField>
+            <Label prefHeight="27.0" prefWidth="108.0" text="Current Price:">
+               <HBox.margin>
+                  <Insets left="15.0" top="30.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="currentIGTintedGlassPrice" editable="false" layoutX="140.0" layoutY="40.0">
+               <HBox.margin>
+                  <Insets top="30.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox layoutX="10.0" layoutY="640.0" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: black;">
+         <children>
+            <Label prefHeight="20.0" prefWidth="86.0" text="IG 1&quot; Low E">
+               <HBox.margin>
+                  <Insets left="5.0" top="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="27.0" prefWidth="84.0" text="New Price:">
+               <HBox.margin>
+                  <Insets top="30.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="newIGLEGlassPrice">
+               <HBox.margin>
+                  <Insets top="30.0" />
+               </HBox.margin>
+            </TextField>
+            <Label prefHeight="27.0" prefWidth="108.0" text="Current Price:">
+               <HBox.margin>
+                  <Insets left="15.0" top="30.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="currentIGLEGlassPrice" editable="false" layoutX="140.0" layoutY="40.0">
+               <HBox.margin>
+                  <Insets top="30.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <Button mnemonicParsing="false" prefHeight="41.0" prefWidth="90.0" text="Change">
+         <VBox.margin>
+            <Insets bottom="15.0" left="250.0" top="15.0" />
          </VBox.margin>
       </Button>
    </children>
