@@ -64,7 +64,7 @@ public class PricingController implements Initializable {
         int panels = panelsChoice.getValue();
         int midRails = midRailBox.getValue();
 
-        double glassPriceChange = 12;
+        double glassPriceChange = 22;
         double metalPriceChange = 1.60;
 
         if (pricingType.equals("Standard AP Pricing")) {

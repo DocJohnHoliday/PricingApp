@@ -27,7 +27,7 @@ public class MathFormulas {
             height = height * 2;
         }
         if (panels > 1) {
-            int verticals = panels + 1;
+            int verticals = panels + 2;
             height = height * verticals;
         }
         if(midRails == 0) {
