@@ -47,6 +47,7 @@ public class PricingController implements Initializable {
         glassBox.getItems().add("3/16\"");
         glassBox.getItems().add("3/16\" Tinted");
         glassBox.getItems().add("Low E");
+        glassBox.setValue("IG 1\" Clear");
     }
 
     @FXML
@@ -64,8 +65,17 @@ public class PricingController implements Initializable {
         int panels = panelsChoice.getValue();
         int midRails = midRailBox.getValue();
 
-        double glassPriceChange = 22;
+        double glassPriceChange;
         double metalPriceChange = 1.60;
+
+        String glassType = glassBox.getValue();
+
+        if(glassType.equals("IG 1\" Clear")){
+            glassPriceChange = 22;
+
+        } else {
+            glassPriceChange = 12;
+        }
 
         if (pricingType.equals("Standard AP Pricing")) {
             double glassSize = mathFormulas.glassSquareFootage(widthDouble, heightDouble, glassPriceChange);
